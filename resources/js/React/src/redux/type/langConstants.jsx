@@ -1,0 +1,2 @@
+export const CHANGE_LANG_EN = "CHANGE_LANG_EN";
+export const CHANGE_LANG_AR = "CHANGE_LANG_AR";

@@ -1,0 +1,247 @@
+.login {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: #fff;
+   overflow: auto;
+   z-index: 999999;
+}
+.login .top {
+   width: 100%;
+   height: clamp(800px, 100vh, 1500px);
+}
+.login .back {
+   position: absolute;
+   top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+}
+html[lang="en"] .login .back{
+   left: 20px;
+   transform: rotate(180deg);
+}
+html[lang="ar"] .login .back{
+   right: 20px;
+}
+.login ~ .footer {
+   display: none;
+}
+.login .login-content {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   display: flex;
+   flex-direction: row;
+}
+.login .login-content .left {
+   background-color: var(--color-login);
+   flex-grow: 1;
+   overflow: hidden;
+   position: relative;
+   width: 30%;
+   display: flex;
+   align-items: center;
+}
+.login .login-content .left .left-content {
+   color: #fff;
+   padding-inline-start: 20px;
+}
+.login .login-content .left .left-content h2 {
+   line-height: 2.2;
+   font-size: 24px;
+}
+.login .login-content .left .left-content p {
+   font-size: 1.1rem;
+}
+.login .login-content .left img {
+   position: absolute;
+   right: 0;
+   bottom: -55px;
+   object-fit: cover;
+   width: 100%;
+}
+.login .login-content .right {
+   width: 55%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.login .login-content .right img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   -o-object-fit: cover;
+   margin-bottom: 30px;
+}
+.login .login-content .right .forms {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0 0 5px #7777;
+   width: 320px;
+   border-radius: 10px;
+}
+.login .login-content .right .forms form h3 {
+   color: var(--color-login);
+   text-align: center;
+   margin-bottom: 10px;
+}
+.login .login-content .right .forms form .col-form {
+   margin-bottom: 20px;
+}
+.login .login-content .right .forms form .col-form label {
+   color: #000;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 2;
+   display: inline-block;
+   margin-bottom: 2px;
+}
+.login .login-content .right .forms form .col-form .row-form {
+   border: 1px solid #ddd;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   border-radius: 5px;
+}
+.login .login-content .right .forms form .col-form .row-form i {
+   color: var(--color-login);
+   font-weight: 600;
+   margin-inline-end: 5px;
+}
+.login .login-content .right .forms form .col-form .row-form input {
+   width: 100%;
+   caret-color: var(--color-login);
+}
+.login .login-content .right .forms form button {
+   width: 100%;
+   background: var(--color-login);
+   color: #fff;
+   padding: 10px 0;
+   font-size: 14px;
+   font-weight: 500;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+@media (max-width: 767px) {
+   .login .login-content .left {
+      display: none;
+   }
+   .login .login-content {
+      justify-content: center;
+   }
+}
+@media (max-width: 480px) {
+   .login .login-content .right {
+      width: 90%;
+   }
+   .login .login-content .right .forms {
+      width: 100%;
+   }
+}
+:root {
+   --main-color: #1270b5;
+   --secound-color: #008c39;
+   --color-login: #007672;
+}
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+   width: 5px;
+}
+::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 5px grey;
+   border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--main-color);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+   opacity: 0.3;
+}
+body {
+   font-family: "Tajawal", sans-serif;
+   width: 100%;
+   overflow-x: hidden;
+}
+.container {
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   margin: auto;
+}
+a {
+   color: #000;
+   text-decoration: none;
+}
+li {
+   list-style-type: none;
+}
+.p50 {
+   padding: 50px 0;
+}
+.h100vh {
+   height: clamp(600px, 100vh, 1000px);
+}
+.blur-img::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #707070;
+   opacity: 0.6;
+}
+.pattern::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(../src/assets/images/pattern/pattern.png);
+   opacity: 0.06;
+   z-index: -1;
+}
+.py30 {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+.ml2 {
+   margin-inline-end: 25px;
+}
+.mb2 {
+   margin-bottom: 2rem;
+}
+input,
+textarea,
+button {
+   outline: none;
+   border: none;
+   font-family: "Tajawal", sans-serif;
+}
+.abs {
+   position: relative;
+}
+.popup .popup-content .close {
+   margin: 10px 5px;
+}
+.popup .popup-content .close i {
+   cursor: pointer;
+}

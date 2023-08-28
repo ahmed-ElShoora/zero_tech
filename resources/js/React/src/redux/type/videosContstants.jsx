@@ -1,0 +1,3 @@
+export const VIDEOS_REQUEST = "VIDEOS_REQUEST";
+export const VIDEOS_SUCCESS = "VIDEOS_SUCCESS";
+export const VIDEOS_FAIL = "VIDEOS_FAIL";

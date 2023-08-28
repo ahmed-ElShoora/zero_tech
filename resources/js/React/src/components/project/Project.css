@@ -1,0 +1,93 @@
+.project-content{
+   max-width: 1200px;
+   margin: auto;
+}
+.project-content .info{
+   margin-top: 30px;
+   margin-bottom: 30px;
+   background-color: var(--main-color);
+   padding: 20px;
+   width: 100%;
+   color: #fff;
+}
+.project-content .info p.title{
+   margin-bottom: 15px;
+   font-weight: 500;
+   font-size: 1.5rem;
+}
+.project-content .info .topic{
+   padding-bottom: 5px;
+}
+.project-content .identification{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 50px;
+   margin-top: 50px;
+   position: relative;
+}
+.project-content .identification img{
+   width: 100%;
+   height: 100%;
+   object-fit: scale-down;
+}
+.project-content .identification .item-box{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+.project-content .identification .item-box:nth-child(even){
+   align-self: flex-start;
+   flex-direction: column;
+}
+.project-content .identification .item-box:nth-child(odd){
+   flex-direction: column-reverse;
+   align-self: flex-end;
+}
+.project-content .identification .item-box:nth-child(odd) p{
+   margin-top: 15px;
+}
+.project-content .identification .item-box:nth-child(even) p{
+   margin-bottom: 15px;
+}
+.project-content .identification .item-box p{
+   font-weight: 500;
+   font-size: 1.1rem;
+   color: var(--main-color);
+}
+.project-content .identification .item-box .icon{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: #fff;
+   box-shadow: 0 2px 5px #ddd;
+}
+.project-content .identification .item-box .icon img{
+   padding: 20px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.project-content .identification > svg{
+   position: absolute;
+   top: 0;
+   left: 30px;
+   width: 94%;
+   height: 100%;
+   z-index: -1;
+}
+@media (max-width: 991px) {
+
+   .project-content .identification > svg {
+      width: 90%;
+   }
+}
+@media (max-width: 767px) {
+   .project-content .identification > div {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+   }
+   .project-content .identification > svg {
+      display: none;
+   }
+}

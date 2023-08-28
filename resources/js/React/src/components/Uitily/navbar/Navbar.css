@@ -1,0 +1,243 @@
+.navbar {
+   background-color: #f6f0f9;
+   width: 100%;
+   height: 96px;
+   display: flex;
+   padding: 5px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+   box-shadow: 0 0 3px rgba(0, 0, 0, 0.342);
+}
+.navbar .container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+}
+.navbar .logo {
+   flex-grow: 1;
+}
+.navbar .logo img {
+   width: 130px;
+   height: 100%;
+   object-fit: scale-down;
+}
+.navbar .nav {
+   flex-grow: 3;
+}
+.navbar .nav ul {
+   display: flex;
+   align-items: center;
+}
+.navbar .nav li {
+   margin-inline-end: 20px;
+}
+.navbar .nav li a {
+   font-size: 18px;
+   font-weight: 500;
+   padding-bottom: 10px;
+   transition: all 0.3s ease-in-out;
+}
+.navbar .nav li a:hover,
+.navbar .nav li a.active {
+   border-bottom: 3px solid var(--main-color);
+   font-weight: 700;
+   color: var(--main-color);
+}
+.navbar .more {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.navbar .more > a,
+.navbar .more > .lang {
+   background-color: var(--main-color);
+   color: #fff;
+   padding: 7px 15px;
+   margin-inline-end: 10px;
+   border-radius: 4px;
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;
+}
+.navbar .cust {
+   flex: 1;
+   text-align: end;
+}
+.navbar .cust a {
+   background-color: var(--main-color);
+   color: #fff;
+   padding: 7px 15px;
+   margin-inline-end: 10px;
+   border-radius: 4px;
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;
+}
+.navbar .cust a:hover {
+   border-bottom: none !important;
+   font-weight: 500 !important;
+   color: #fff !important;
+}
+.navbar .more > .lang {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.navbar .more > .lang label:first-of-type {
+   margin-inline-end: 5px;
+}
+.navbar .more > .lang label:last-of-type {
+   margin-inline-start: 5px;
+}
+.navbar .more > .lang input[type="checkbox"] {
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   -o-appearance: none;
+   width: 35px;
+   height: 20px;
+   background: #fff;
+   border-radius: 10px;
+   position: relative;
+}
+.navbar .more > .lang input[type="checkbox"]::before {
+   content: "";
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   background-color: var(--main-color);
+   border-radius: 50%;
+   top: 50%;
+   left: 2px;
+   transform: translateY(-50%);
+   transition: all 0.3s ease-in-out;
+}
+.navbar .more > .lang input[type="checkbox"]:checked::before {
+   right: 2px;
+   left: 0;
+}
+.mobile {
+   display: none;
+   cursor: pointer;
+}
+.navbar .earth {
+   position: relative;
+}
+.navbar .earth .drop {
+   position: absolute;
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   width: 50px;
+   left: 0;
+   top: calc(100% + 5px);
+   box-shadow: 0 0 2px rgba(0, 0, 0, 0.349);
+   text-align: center;
+   transform: scale(0) rotate(360deg);
+   transition: transform 0.3s ease-in-out;
+}
+.navbar .earth .drop-active {
+   transform: scale(1) rotate(0deg);
+}
+.navbar .earth .drop span {
+   padding: 6px 0;
+   cursor: pointer;
+   border-bottom: 1px solid #ddd;
+}
+.navbar .earth .drop span:hover {
+   background-color: #ddd;
+   transition: all 0.3s ease-in-out;
+}
+.navbar .earth i {
+   font-size: 20px;
+   color: var(--main-color);
+   margin-top: 10px;
+   cursor: pointer;
+}
+.navbar .earth .circle-top {
+   position: absolute;
+   top: 0;
+   left: 10px;
+   width: 20px;
+   height: 20px;
+   text-align: center;
+   color: #fff;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   cursor: pointer;
+}
+@media (max-width: 991px) {
+   .mobile {
+      display: block;
+   }
+   .navbar {
+      height: 60px;
+   }
+   .navbar .container,
+   .navbar .logo {
+      height: 100%;
+   }
+
+   .navbar .nav {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: 9999;
+      background-color: #fff;
+      transform-origin: center left;
+      transform: translateY(-110vh);
+      transition: transform 0.3s ease-in-out;
+   }
+   .navbar .nav.active,
+   .navbar .more.active {
+      transform: translateY(0);
+   }
+   .navbar .nav.active {
+      top: 0;
+   }
+   .navbar .more.active a,
+   .navbar .more.active .lang {
+      margin-bottom: 10px;
+      width: 130px;
+      text-align: center;
+   }
+   .navbar .nav.active ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 100px;
+      width: 100%;
+   }
+   .navbar .nav.active ul li {
+      margin-bottom: 10px;
+   }
+   .navbar .nav.active ul li a {
+      padding: 0;
+   }
+   .mobile .close {
+      z-index: 9999;
+      position: absolute;
+      top: 40px;
+      left: 50px;
+   }
+   .mobile i {
+      font-size: 27px;
+   }
+   .earth {
+      order: 1;
+   }
+   .navbar .cust {
+      order: 1;
+   }
+   .navbar .cust a {
+      padding: 7px 15px !important;
+   }
+}

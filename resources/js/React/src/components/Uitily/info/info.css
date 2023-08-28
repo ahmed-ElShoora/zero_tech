@@ -1,0 +1,10 @@
+.info-content h1{
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+.info-content a{
+   color: #fff;
+   padding: 0 7px;
+   font-size: 19px;
+   font-weight: 500;
+}

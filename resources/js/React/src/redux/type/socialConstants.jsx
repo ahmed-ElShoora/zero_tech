@@ -1,0 +1,3 @@
+export const SOCIAL_REQUEST = "SOCIAL_REQUEST";
+export const SOCIAL_SUCCESS = "SOCIAL_SUCCESS";
+export const SOCIAL_FAIL = "SOCIAL_FAIL";
